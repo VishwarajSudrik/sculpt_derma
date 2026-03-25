@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useParams, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -7,16 +7,15 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Appointment from './pages/Appointment'
 import Blog from './pages/Blog'
-import DoctorProfile from './pages/DoctorProfile'
-import DoctorProfileDhanashree from './pages/DoctorProfileDhanashree'
-import DoctorProfileRohini from './pages/DoctorProfileRohini'
-import DoctorProfileAkash from './pages/DoctorProfileAkash'
-import DoctorProfileSomnath from './pages/DoctorProfileSomnath'
-import DoctorProfileAzhar from './pages/DoctorProfileAzhar'
-import DoctorProfilePranil from './pages/DoctorProfilePranil'
-import DoctorProfileShrenik from './pages/DoctorProfileShrenik'
-import DoctorProfileNitin from './pages/DoctorProfileNitin'
-import DoctorProfileBhushan from './pages/DoctorProfileBhushan'
+import DoctorProfilePage from './components/DoctorProfilePage'
+import { getDoctorById } from './data/doctors'
+
+function DoctorRoute() {
+  const { doctorId } = useParams<{ doctorId: string }>()
+  const doctor = doctorId ? getDoctorById(doctorId) : undefined
+  if (!doctor) return <Navigate to="/about" replace />
+  return <DoctorProfilePage doctor={doctor} />
+}
 
 function App() {
   return (
@@ -31,16 +30,7 @@ function App() {
           <Route path="/appointment" element={<Appointment />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:blogId" element={<Blog />} />
-          <Route path="/doctor/dr-swarali" element={<DoctorProfile />} />
-          <Route path="/doctor/dr-dhanashree" element={<DoctorProfileDhanashree />} />
-          <Route path="/doctor/dr-rohini" element={<DoctorProfileRohini />} />
-          <Route path="/doctor/dr-akash" element={<DoctorProfileAkash />} />
-          <Route path="/doctor/dr-somnath" element={<DoctorProfileSomnath />} />
-          <Route path="/doctor/dr-azhar" element={<DoctorProfileAzhar />} />
-          <Route path="/doctor/dr-pranil" element={<DoctorProfilePranil />} />
-          <Route path="/doctor/dr-shrenik" element={<DoctorProfileShrenik />} />
-          <Route path="/doctor/dr-nitin" element={<DoctorProfileNitin />} />
-          <Route path="/doctor/dr-bhushan" element={<DoctorProfileBhushan />} />
+          <Route path="/doctor/:doctorId" element={<DoctorRoute />} />
         </Routes>
       </main>
       <Footer />

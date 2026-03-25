@@ -1,75 +1,12 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Star, CheckCircle, MapPin, Phone, Clock, ChevronLeft, ChevronRight, Users } from 'lucide-react'
+import { ArrowRight, Star, CheckCircle, MapPin, Phone, Clock, ChevronLeft, ChevronRight } from 'lucide-react'
+import { useHorizontalScroll } from '../hooks/useHorizontalScroll'
 
 const Home = () => {
   const [selectedImage, setSelectedImage] = useState<{title: string, image: string, serviceLink: string} | null>(null)
-  const serviceScrollRef = useRef<HTMLDivElement>(null)
-  const transformationScrollRef = useRef<HTMLDivElement>(null)
-  const isServicesPausedRef = useRef(false)
-  const isTransformationsPausedRef = useRef(false)
-
-  const scrollServices = (direction: 'left' | 'right') => {
-    if (serviceScrollRef.current) {
-      const scrollAmount = 300 // Smaller scroll amount
-      console.log('Manual scroll services:', direction, scrollAmount) // Debug log
-      serviceScrollRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth'
-      })
-    }
-  }
-
-  const scrollTransformations = (direction: 'left' | 'right') => {
-    if (transformationScrollRef.current) {
-      const scrollAmount = 300 // Smaller scroll amount
-      console.log('Manual scroll transformations:', direction, scrollAmount) // Debug log
-      transformationScrollRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth'
-      })
-    }
-  }
-
-  // Auto-scroll functionality with pause on hover
-  useEffect(() => {
-    const serviceScrollInterval = setInterval(() => {
-      if (serviceScrollRef.current && !isServicesPausedRef.current) {
-        console.log('Auto-scrolling services...') // Debug log
-        
-        // Check if we've reached the end, then reset to beginning
-        if (serviceScrollRef.current.scrollLeft >= serviceScrollRef.current.scrollWidth - serviceScrollRef.current.clientWidth) {
-          serviceScrollRef.current.scrollLeft = 0
-        } else {
-          serviceScrollRef.current.scrollBy({
-            left: 300,
-            behavior: 'smooth'
-          })
-        }
-      }
-    }, 2000) // 2 seconds
-
-    const transformationScrollInterval = setInterval(() => {
-      if (transformationScrollRef.current && !isTransformationsPausedRef.current) {
-        console.log('Auto-scrolling transformations...') // Debug log
-        
-        // Check if we've reached the end, then reset to beginning
-        if (transformationScrollRef.current.scrollLeft >= transformationScrollRef.current.scrollWidth - transformationScrollRef.current.clientWidth) {
-          transformationScrollRef.current.scrollLeft = 0
-        } else {
-          transformationScrollRef.current.scrollBy({
-            left: 300,
-            behavior: 'smooth'
-          })
-        }
-      }
-    }, 2000) // 2 seconds
-
-    return () => {
-      clearInterval(serviceScrollInterval)
-      clearInterval(transformationScrollInterval)
-    }
-  }, [])
+  const { scrollRef: serviceScrollRef, isPausedRef: isServicesPausedRef, scroll: scrollServices } = useHorizontalScroll()
+  const { scrollRef: transformationScrollRef, isPausedRef: isTransformationsPausedRef, scroll: scrollTransformations } = useHorizontalScroll()
   const features = [
     {
       icon: <div className="w-8 h-8 bg-gradient-to-br from-accent-400 to-primary-400 rounded-full flex items-center justify-center"><span className="text-white text-xl">👨‍⚕️</span></div>,
