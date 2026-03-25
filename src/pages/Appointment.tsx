@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Phone, Mail, Clock, MapPin, CheckCircle, ArrowRight, Calendar, User, Stethoscope, Building2 } from 'lucide-react'
+import { Phone, Mail, Clock, MapPin, CheckCircle, ArrowRight, Calendar, User, Stethoscope } from 'lucide-react'
 
 const Appointment = () => {
   const [formData, setFormData] = useState({

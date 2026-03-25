@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { Calendar, Clock, ArrowRight, User, ChevronLeft, Share2, Facebook, Twitter } from 'lucide-react'
+import { Calendar, Clock, ArrowRight, User, ChevronLeft, Facebook, Twitter } from 'lucide-react'
 
 // Blog data structure
 interface BlogPost {
