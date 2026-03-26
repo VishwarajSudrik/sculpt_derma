@@ -7,8 +7,8 @@ const Services = () => {
       name: "Breast Implants",
       description: "Our breast implant clinic provides expert, safe, and advanced procedures to enhance shape, size, and symmetry of your breasts. Designed to create natural-looking, beautifully contoured results.",
       price: "Rs. 1.4L",
-      image: "/src/assets/img/Breast-Augmentation-with-Implant.jpg",
-      detailImage: "/src/assets/img/43.jpg",
+      image: "/src/assets/images/general/Breast-Augmentation-with-Implant.jpg",
+      detailImage: "/src/assets/images/general/43.jpg",
       duration: "2-3 hours",
       recovery: "1-2 weeks",
       features: ["FDA-approved implants", "Minimal scarring", "Natural-looking results", "Customized to body goals"]
@@ -17,8 +17,8 @@ const Services = () => {
       name: "Mommy Makeover",
       description: "Comprehensive package combining multiple procedures to restore your pre-pregnancy body shape and confidence.",
       price: "Starting from Rs. 2.2L",
-      image: "/src/assets/img/Mommy-Makeover.jpg",
-      detailImage: "/src/assets/img/44.jpg",
+      image: "/src/assets/images/general/Mommy-Makeover.jpg",
+      detailImage: "/src/assets/images/general/44.jpg",
       duration: "4-6 hours",
       recovery: "2-4 weeks",
       features: ["Multiple procedures", "Full body transformation", "Customized approach", "Expert care"]
@@ -27,8 +27,8 @@ const Services = () => {
       name: "Rhinoplasty",
       description: "Reshape your nose with precision and artistry for harmonious facial proportions and improved breathing.",
       price: "Starting from Rs. 80K",
-      image: "/src/assets/img/Rhinoplasty-1.jpg",
-      detailImage: "/src/assets/img/45.jpg",
+      image: "/src/assets/images/general/Rhinoplasty-1.jpg",
+      detailImage: "/src/assets/images/general/45.jpg",
       duration: "2-3 hours",
       recovery: "1-2 weeks",
       features: ["Closed/open technique", "Breathing improvement", "Natural appearance", "Minimal downtime"]
@@ -37,8 +37,8 @@ const Services = () => {
       name: "Breast Reduction",
       description: "Reduce breast size and alleviate discomfort while achieving a more proportionate and lifted appearance.",
       price: "Rs. 80K",
-      image: "/src/assets/img/Breast-Implant-Surgery.jpg",
-      detailImage: "/src/assets/img/46.jpg",
+      image: "/src/assets/images/general/Breast-Implant-Surgery.jpg",
+      detailImage: "/src/assets/images/general/46.jpg",
       duration: "3-4 hours",
       recovery: "2-3 weeks",
       features: ["Symmetry improvement", "Relief from discomfort", "Natural contour", "Quick recovery"]
@@ -47,8 +47,8 @@ const Services = () => {
       name: "Liposuction",
       description: "Advanced body contouring techniques to remove stubborn fat deposits effectively and sculpt your body.",
       price: "Starting from Rs. 60K",
-      image: "/src/assets/img/Liposuction-2-1.jpg",
-      detailImage: "/src/assets/img/47.jpg",
+      image: "/src/assets/images/general/Liposuction-2-1.jpg",
+      detailImage: "/src/assets/images/general/47.jpg",
       duration: "2-4 hours",
       recovery: "1-2 weeks",
       features: ["360-degree liposuction", "VASER technology", "Minimal invasion", "Quick recovery"]
@@ -57,8 +57,8 @@ const Services = () => {
       name: "Gynecomastia",
       description: "Male breast reduction surgery to restore chest confidence and masculinity with minimal visible scars.",
       price: "Starting from Rs. 70K",
-      image: "/src/assets/img/Gynecomastia-Surgery-Pune.jpg",
-      detailImage: "/src/assets/img/48.jpg",
+      image: "/src/assets/images/general/Gynecomastia-Surgery-Pune.jpg",
+      detailImage: "/src/assets/images/general/48.jpg",
       duration: "1-2 hours",
       recovery: "1 week",
       features: ["Minimal scarring", "Natural chest contour", "Quick recovery", "Confidence boost"]
@@ -67,8 +67,8 @@ const Services = () => {
       name: "Tummy Tuck (Abdominoplasty)",
       description: "Flatten and tighten your abdomen with our advanced abdominoplasty procedures and muscle repair.",
       price: "Starting from Rs. 80K",
-      image: "/src/assets/img/Tummy-Tuck-Abdominoplasty.jpg",
-      detailImage: "/src/assets/img/49.jpg",
+      image: "/src/assets/images/general/Tummy-Tuck-Abdominoplasty.jpg",
+      detailImage: "/src/assets/images/general/49.jpg",
       duration: "3-4 hours",
       recovery: "2-4 weeks",
       features: ["Muscle repair", "Skin tightening", "Belly button reconstruction", "Long-lasting results"]
@@ -77,8 +77,8 @@ const Services = () => {
       name: "Neck Lift",
       description: "Rejuvenate your neck and jawline with our advanced neck lift procedures for a youthful appearance.",
       price: "Starting from Rs. 90K",
-      image: "/src/assets/img/50.jpg",
-      detailImage: "/src/assets/img/50.jpg",
+      image: "/src/assets/images/general/50.jpg",
+      detailImage: "/src/assets/images/general/50.jpg",
       duration: "2-3 hours",
       recovery: "1-2 weeks",
       features: ["Minimal scarring", "Natural jawline", "Quick recovery", "Long-lasting results"]
@@ -87,8 +87,8 @@ const Services = () => {
       name: "Labiaplasty",
       description: "Cosmetic surgical procedure to improve the appearance of the labia for enhanced comfort and confidence.",
       price: "Starting from Rs. 60K",
-      image: "/src/assets/img/Labioplasty.jpg",
-      detailImage: "/src/assets/img/51.jpg",
+      image: "/src/assets/images/general/Labioplasty.jpg",
+      detailImage: "/src/assets/images/general/51.jpg",
       duration: "1-2 hours",
       recovery: "1-2 weeks",
       features: ["Minimal discomfort", "Quick recovery", "Natural appearance", "Enhanced comfort"]
@@ -97,8 +97,8 @@ const Services = () => {
       name: "Cheek Augmentation",
       description: "Enhance facial contours and achieve more defined cheekbones with our advanced augmentation procedures.",
       price: "Starting from Rs. 50K",
-      image: "/src/assets/img/52.jpg",
-      detailImage: "/src/assets/img/52.jpg",
+      image: "/src/assets/images/general/52.jpg",
+      detailImage: "/src/assets/images/general/52.jpg",
       duration: "1-2 hours",
       recovery: "1 week",
       features: ["Natural enhancement", "Quick procedure", "Minimal recovery", "Balanced appearance"]
@@ -107,8 +107,8 @@ const Services = () => {
       name: "Arm Lift",
       description: "Remove excess skin and fat from upper arms for a more toned and youthful appearance.",
       price: "Starting from Rs. 70K",
-      image: "/src/assets/img/Arm-Lift.jpg",
-      detailImage: "/src/assets/img/53.jpg",
+      image: "/src/assets/images/general/Arm-Lift.jpg",
+      detailImage: "/src/assets/images/general/53.jpg",
       duration: "2-3 hours",
       recovery: "2-3 weeks",
       features: ["Minimal scarring", "Natural contour", "Quick recovery", "Toned appearance"]
@@ -117,8 +117,8 @@ const Services = () => {
       name: "Vaginoplasty",
       description: "Cosmetic vaginal tightening procedure to enhance both appearance and function.",
       price: "Starting from Rs. 60K",
-      image: "/src/assets/img/Vaginoplasty.jpg",
-      detailImage: "/src/assets/img/54.jpg",
+      image: "/src/assets/images/general/Vaginoplasty.jpg",
+      detailImage: "/src/assets/images/general/54.jpg",
       duration: "1-2 hours",
       recovery: "4-6 weeks",
       features: ["Enhanced function", "Natural appearance", "Quick recovery", "Improved confidence"]
@@ -127,8 +127,8 @@ const Services = () => {
       name: "Vaginal Reconstruction",
       description: "Comprehensive vaginal reconstruction procedures for both aesthetic and functional improvements.",
       price: "Starting from Rs. 80K",
-      image: "/src/assets/img/Vaginal-Resconstruction.jpg",
-      detailImage: "/src/assets/img/55.jpg",
+      image: "/src/assets/images/general/Vaginal-Resconstruction.jpg",
+      detailImage: "/src/assets/images/general/55.jpg",
       duration: "2-3 hours",
       recovery: "4-6 weeks",
       features: ["Functional improvement", "Natural appearance", "Customized approach", "Expert care"]
@@ -141,8 +141,8 @@ const Services = () => {
       description: "Restore volume and youthfulness with premium hyaluronic acid fillers for instant results.",
       price: "Starting from Rs. 15,000",
       duration: "6-12 months",
-      image: "/src/assets/img/Dermal-Fillers.jpg",
-      detailImage: "/src/assets/img/56.jpg",
+      image: "/src/assets/images/general/Dermal-Fillers.jpg",
+      detailImage: "/src/assets/images/general/56.jpg",
       sessionTime: "30-45 mins",
       features: ["Instant results", "No downtime", "Natural look", "FDA-approved"]
     },
@@ -151,8 +151,8 @@ const Services = () => {
       description: "Smooth wrinkles and fine lines with our expert Botox treatments for natural rejuvenation.",
       price: "Starting from Rs. 8,000",
       duration: "4-6 months",
-      image: "/src/assets/img/57.jpg",
-      detailImage: "/src/assets/img/57.jpg",
+      image: "/src/assets/images/general/57.jpg",
+      detailImage: "/src/assets/images/general/57.jpg",
       sessionTime: "15-30 mins",
       features: ["Quick procedure", "Minimal discomfort", "Natural expression", "Proven safety"]
     },
@@ -161,8 +161,8 @@ const Services = () => {
       description: "Permanent hair reduction using advanced laser technology for all skin types.",
       price: "Starting from Rs. 3,000/session",
       duration: "Permanent results",
-      image: "/src/assets/img/58.jpg",
-      detailImage: "/src/assets/img/58.jpg",
+      image: "/src/assets/images/general/58.jpg",
+      detailImage: "/src/assets/images/general/58.jpg",
       sessionTime: "30-60 mins",
       features: ["All skin types", "Pain-free", "Quick sessions", "Lasting results"]
     },
@@ -171,8 +171,8 @@ const Services = () => {
       description: "Advanced treatments to clear acne scars and achieve smooth, clear skin.",
       price: "Starting from Rs. 5,000",
       duration: "Multiple sessions",
-      image: "/src/assets/img/59.jpg",
-      detailImage: "/src/assets/img/59.jpg",
+      image: "/src/assets/images/general/59.jpg",
+      detailImage: "/src/assets/images/general/59.jpg",
       sessionTime: "45-60 mins",
       features: ["Multiple technologies", "Customized plans", "Visible improvement", "Safe procedures"]
     },
@@ -181,8 +181,8 @@ const Services = () => {
       description: "Specialized treatments for hyperpigmentation and melasma for even skin tone.",
       price: "Starting from Rs. 4,000",
       duration: "Multiple sessions",
-      image: "/src/assets/img/60.jpg",
-      detailImage: "/src/assets/img/60.jpg",
+      image: "/src/assets/images/general/60.jpg",
+      detailImage: "/src/assets/images/general/60.jpg",
       sessionTime: "30-45 mins",
       features: ["Combination therapy", "Sun protection", "Even skin tone", "Long-lasting"]
     },
@@ -191,8 +191,8 @@ const Services = () => {
       description: "Advanced treatments to reduce freckles and achieve more even, clear skin complexion.",
       price: "Starting from Rs. 3,000",
       duration: "Multiple sessions",
-      image: "/src/assets/img/61.jpg",
-      detailImage: "/src/assets/img/61.jpg",
+      image: "/src/assets/images/general/61.jpg",
+      detailImage: "/src/assets/images/general/61.jpg",
       sessionTime: "30-45 mins",
       features: ["Gentle treatment", "Even complexion", "Quick recovery", "Visible results"]
     },
@@ -201,8 +201,8 @@ const Services = () => {
       description: "Rejuvenate your skin with our premium chemical peel treatments for glowing skin.",
       price: "Starting from Rs. 2,500",
       duration: "4-6 weeks",
-      image: "/src/assets/img/62.jpg",
-      detailImage: "/src/assets/img/62.jpg",
+      image: "/src/assets/images/general/62.jpg",
+      detailImage: "/src/assets/images/general/62.jpg",
       sessionTime: "30-45 mins",
       features: ["Multiple depths", "Customized strength", "Quick recovery", "Glowing skin"]
     },
@@ -211,8 +211,8 @@ const Services = () => {
       description: "Enhance lip volume and shape with premium dermal fillers for natural, fuller lips.",
       price: "Starting from Rs. 12,000",
       duration: "6-12 months",
-      image: "/src/assets/img/Lip-Fillers.jpg",
-      detailImage: "/src/assets/img/63.jpg",
+      image: "/src/assets/images/general/Lip-Fillers.jpg",
+      detailImage: "/src/assets/images/general/63.jpg",
       sessionTime: "30-45 mins",
       features: ["Natural enhancement", "Instant results", "Minimal discomfort", "FDA-approved"]
     },
@@ -221,8 +221,8 @@ const Services = () => {
       description: "Lift and tighten facial skin without surgery using advanced non-invasive techniques.",
       price: "Starting from Rs. 25,000",
       duration: "6-12 months",
-      image: "/src/assets/img/64.jpg",
-      detailImage: "/src/assets/img/64.jpg",
+      image: "/src/assets/images/general/64.jpg",
+      detailImage: "/src/assets/images/general/64.jpg",
       sessionTime: "60-90 mins",
       features: ["No surgery", "Natural lift", "Quick recovery", "Long-lasting results"]
     },
@@ -231,8 +231,8 @@ const Services = () => {
       description: "Complete body contouring with our advanced 360-degree liposuction technique.",
       price: "Starting from Rs. 1.5L",
       duration: "Permanent",
-      image: "/src/assets/img/360-Deg.-Lepictomy.jpg",
-      detailImage: "/src/assets/img/65.jpg",
+      image: "/src/assets/images/general/360-Deg.-Lepictomy.jpg",
+      detailImage: "/src/assets/images/general/65.jpg",
       sessionTime: "3-4 hours",
       features: ["Complete contouring", "Advanced technique", "Dramatic results", "Single procedure"]
     }
@@ -489,10 +489,10 @@ const Services = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { step: "01", title: "Consultation", description: "Free initial consultation to discuss your goals", image: "/src/assets/img/66.jpg" },
-              { step: "02", title: "Planning", description: "Customized treatment plan tailored to you", image: "/src/assets/img/67.jpg" },
-              { step: "03", title: "Treatment", description: "Expert procedure in our state-of-the-art facility", image: "/src/assets/img/68.jpg" },
-              { step: "04", title: "Aftercare", description: "Comprehensive follow-up care and support", image: "/src/assets/img/69.jpg" }
+              { step: "01", title: "Consultation", description: "Free initial consultation to discuss your goals", image: "/src/assets/images/general/66.jpg" },
+              { step: "02", title: "Planning", description: "Customized treatment plan tailored to you", image: "/src/assets/images/general/67.jpg" },
+              { step: "03", title: "Treatment", description: "Expert procedure in our state-of-the-art facility", image: "/src/assets/images/general/68.jpg" },
+              { step: "04", title: "Aftercare", description: "Comprehensive follow-up care and support", image: "/src/assets/images/general/69.jpg" }
             ].map((item, index) => (
               <div key={index} className="text-center group">
                 <div className="relative mb-6">

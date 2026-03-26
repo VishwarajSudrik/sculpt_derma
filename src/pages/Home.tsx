@@ -2,32 +2,16 @@ import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Star, CheckCircle, MapPin, Phone, Clock, ChevronLeft, ChevronRight, User, Microscope, Sparkles, Baby, Dumbbell, Activity, Flower, Syringe, Zap, StarOff, Beaker, Heart, Palette, Sun } from 'lucide-react'
 
-// Team image paths using public URLs
-const drAkashTarkase = '/images/team/Dr. Akash Tarkase.jpg'
-const drAzhar = '/images/team/Dr. Azhar.jpg'
-const drBhushanDarkase = '/images/team/Dr. Bhushan Darkase.jpg'
-const drDhanashree = '/images/team/Dr. Dhanashree.jpg'
-const drNitinMaske = '/images/team/Dr. Nitin Maske.jpg'
-const drRohini = '/images/team/Dr. Rohini.jpg'
-const drShrenikOswal = '/images/team/Dr. Shrenik Oswal.jpg'
-const drSomnathKarad = '/images/team/Dr. Somnath Karad.jpg'
-const drSwarali = '/images/team/Dr. Swarali.jpg'
-
-// General image paths using public URLs
-const logoImg = '/images/general/Sculpt-Logo-2.png'
-const liposuctionImg = '/images/general/360-Deg.-Lepictomy.jpg'
-const armLiftImg = '/images/general/Arm-Lift.jpg'
-const breastAugmentationImg = '/images/general/Breast-Augmentation-with-Implant.jpg'
-const dermalFillersImg = '/images/general/Dermal-Fillers.jpg'
-const gynecomastiaImg = '/images/general/Gynecomastia-Surgery-Pune.jpg'
-const labiaplastyImg = '/images/general/Labioplasty.jpg'
-const lipFillersImg = '/images/general/Lip-Fillers.jpg'
-const liposuctionAbdomenImg = '/images/general/Liposuction-Abdomen.jpg'
-const rhinoplastyImg = '/images/general/Rhinoplasty-1.jpg'
-const mommyMakeoverImg = '/images/general/Mommy-Makeover.jpg'
-const tummyTuckImg = '/images/general/Tummy-Tuck-Abdominoplasty.jpg'
-const vaginalReconstructionImg = '/images/general/Vaginal-Resconstruction.jpg'
-const vaginoplastyImg = '/images/general/Vaginoplasty.jpg'
+// Team image paths
+const drAkashTarkase = '/src/assets/images/team/Dr. Akash Tarkase.jpg'
+const drAzhar = '/src/assets/images/team/Dr. Azhar.jpg'
+const drBhushanDarkase = '/src/assets/images/team/Dr. Bhushan Darkase.jpg'
+const drDhanashree = '/src/assets/images/team/Dr. Dhanashree.jpg'
+const drNitinMaske = '/src/assets/images/team/Dr. Nitin Maske.jpg'
+const drRohini = '/src/assets/images/team/Dr. Rohini.jpg'
+const drShrenikOswal = '/src/assets/images/team/Dr. Shrenik Oswal.jpg'
+const drSomnathKarad = '/src/assets/images/team/Dr. Somnath Karad.jpg'
+const drSwarali = '/src/assets/images/team/Dr. Swarali.jpg'
 
 const Home = () => {
   const [selectedImage, setSelectedImage] = useState<{ title: string, image: string, serviceLink: string } | null>(null)
@@ -150,19 +134,19 @@ const Home = () => {
   ]
 
   const beforeAfter = [
-    { title: "360 Deg. Lepictomy", image: liposuctionImg, serviceLink: "/services#liposuction" },
-    { title: "Arm Lift", image: armLiftImg, serviceLink: "/services#arm-lift" },
-    { title: "Breast Augmentation with Implant", image: breastAugmentationImg, serviceLink: "/services#breast-implants" },
-    { title: "Dermal Fillers", image: dermalFillersImg, serviceLink: "/services#dermal-fillers" },
-    { title: "Gynecomastia Surgery Pune", image: gynecomastiaImg, serviceLink: "/services#gynecomastia" },
-    { title: "Labioplasty", image: labiaplastyImg, serviceLink: "/services#labiaplasty" },
-    { title: "Lip Fillers", image: lipFillersImg, serviceLink: "/services#lip-fillers" },
-    { title: "Liposuction Abdomen", image: liposuctionAbdomenImg, serviceLink: "/services#liposuction" },
-    { title: "Rhinoplasty in Pune", image: rhinoplastyImg, serviceLink: "/services#rhinoplasty" },
-    { title: "Mommy Makeover", image: mommyMakeoverImg, serviceLink: "/services#mommy-makeover" },
-    { title: "Tummy Tuck (Abdominoplasty)", image: tummyTuckImg, serviceLink: "/services#tummy-tuck" },
-    { title: "Vaginal Reconstruction", image: vaginalReconstructionImg, serviceLink: "/services#vaginal-reconstruction" },
-    { title: "Vaginoplasty", image: vaginoplastyImg, serviceLink: "/services#vaginoplasty" }
+    { title: "360 Deg. Lepictomy", image: "/src/assets/images/general/360-Deg.-Lepictomy.jpg", serviceLink: "/services#liposuction" },
+    { title: "Arm Lift", image: "/src/assets/images/general/Arm-Lift.jpg", serviceLink: "/services#arm-lift" },
+    { title: "Breast Augmentation with Implant", image: "/src/assets/images/general/Breast-Augmentation-with-Implant.jpg", serviceLink: "/services#breast-implants" },
+    { title: "Dermal Fillers", image: "/src/assets/images/general/Dermal-Fillers.jpg", serviceLink: "/services#dermal-fillers" },
+    { title: "Gynecomastia Surgery Pune", image: "/src/assets/images/general/Gynecomastia-Surgery-Pune.jpg", serviceLink: "/services#gynecomastia" },
+    { title: "Labioplasty", image: "/src/assets/images/general/Labioplasty.jpg", serviceLink: "/services#labiaplasty" },
+    { title: "Lip Fillers", image: "/src/assets/images/general/Lip-Fillers.jpg", serviceLink: "/services#lip-fillers" },
+    { title: "Liposuction Abdomen", image: "/src/assets/images/general/Liposuction-Abdomen.jpg", serviceLink: "/services#liposuction" },
+    { title: "Rhinoplasty in Pune", image: "/src/assets/images/general/Rhinoplasty-1.jpg", serviceLink: "/services#rhinoplasty" },
+    { title: "Mommy Makeover", image: "/src/assets/images/general/Mommy-Makeover.jpg", serviceLink: "/services#mommy-makeover" },
+    { title: "Tummy Tuck (Abdominoplasty)", image: "/src/assets/images/general/Tummy-Tuck-Abdominoplasty.jpg", serviceLink: "/services#tummy-tuck" },
+    { title: "Vaginal Reconstruction", image: "/src/assets/images/general/Vaginal-Resconstruction.jpg", serviceLink: "/services#vaginal-reconstruction" },
+    { title: "Vaginoplasty", image: "/src/assets/images/general/Vaginoplasty.jpg", serviceLink: "/services#vaginoplasty" }
   ]
 
   const clinics = [
@@ -313,13 +297,13 @@ const Home = () => {
           {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
             <div key={i} className="flex items-center space-x-12 px-6 leading-none">
               <span className="text-3xl md:text-5xl font-serif text-white/50 uppercase tracking-[0.2em]">New Clients Welcome</span>
-              <img src={logoImg} alt="Logo" className="h-22 md:h-28 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(184,138,90,0.7)] mx-6" />
+              <img src="/src/assets/images/general/Sculpt-Logo-2.png" alt="Logo" className="h-22 md:h-28 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(184,138,90,0.7)] mx-6" />
               <span className="text-3xl md:text-5xl font-serif text-white/50 uppercase tracking-[0.2em]">Body Contouring Packages Available</span>
-              <img src={logoImg} alt="Logo" className="h-22 md:h-28 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(184,138,90,0.7)] mx-6" />
+              <img src="/src/assets/images/general/Sculpt-Logo-2.png" alt="Logo" className="h-22 md:h-28 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(184,138,90,0.7)] mx-6" />
               <span className="text-3xl md:text-5xl font-serif text-gradient uppercase tracking-[0.2em] font-light italic drop-shadow-[0_0_15px_rgba(184,138,90,0.4)]">Book Today & Glow Tomorrow</span>
-              <img src={logoImg} alt="Logo" className="h-22 md:h-28 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(184,138,90,0.7)] mx-6" />
+              <img src="/src/assets/images/general/Sculpt-Logo-2.png" alt="Logo" className="h-22 md:h-28 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(184,138,90,0.7)] mx-6" />
               <span className="text-3xl md:text-5xl font-serif text-white/50 uppercase tracking-[0.2em]">10% Off First-Time Botox</span>
-              <img src={logoImg} alt="Logo" className="h-22 md:h-28 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(184,138,90,0.7)] mx-6" />
+              <img src="/src/assets/images/general/Sculpt-Logo-2.png" alt="Logo" className="h-22 md:h-28 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(184,138,90,0.7)] mx-6" />
             </div>
           ))}
         </div>
