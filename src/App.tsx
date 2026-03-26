@@ -1,22 +1,23 @@
 import { Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import { Navbar, Footer } from './components/layout'
 import Home from './pages/Home'
 import Services from './pages/Services'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Appointment from './pages/Appointment'
 import Blog from './pages/Blog'
-import DoctorProfile from './pages/DoctorProfile'
-import DoctorProfileDhanashree from './pages/DoctorProfileDhanashree'
-import DoctorProfileRohini from './pages/DoctorProfileRohini'
-import DoctorProfileAkash from './pages/DoctorProfileAkash'
-import DoctorProfileSomnath from './pages/DoctorProfileSomnath'
-import DoctorProfileAzhar from './pages/DoctorProfileAzhar'
-import DoctorProfilePranil from './pages/DoctorProfilePranil'
-import DoctorProfileShrenik from './pages/DoctorProfileShrenik'
-import DoctorProfileNitin from './pages/DoctorProfileNitin'
-import DoctorProfileBhushan from './pages/DoctorProfileBhushan'
+import {
+  DoctorProfile,
+  DoctorProfileDhanashree,
+  DoctorProfileRohini,
+  DoctorProfileAkash,
+  DoctorProfileSomnath,
+  DoctorProfileAzhar,
+  DoctorProfilePranil,
+  DoctorProfileShrenik,
+  DoctorProfileNitin,
+  DoctorProfileBhushan
+} from './pages/doctors'
 
 function App() {
   return (

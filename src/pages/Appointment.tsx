@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Phone, Mail, Clock, MapPin, CheckCircle, ArrowRight, Calendar, User, Stethoscope, Building2 } from 'lucide-react'
+import { Phone, Mail, Clock, MapPin, CheckCircle, ArrowRight, Calendar, User, Stethoscope } from 'lucide-react'
 
 const Appointment = () => {
   const [formData, setFormData] = useState({
@@ -62,17 +61,17 @@ const Appointment = () => {
     {
       name: "Sculpt Derma, Kharadi",
       address: "Clover Galleria, Fountain Road, near Forest County Gate 4, EON Free Zone, Kharadi",
-      image: "/src/assets/img/80.jpg"
+      image: "/src/assets/images/general/80.jpg"
     },
     {
       name: "Sculpt Derma, Wakad",
       address: "Western High St, opposite to Phoenix mall, Shankar Kalat Nagar, Wakad",
-      image: "/src/assets/img/81.jpg"
+      image: "/src/assets/images/general/81.jpg"
     },
     {
       name: "Sculpt Derma, Baner",
       address: "Shivam Regency, Baner Rd, above Jyoti Appliances, Baner",
-      image: "/src/assets/img/82.jpg"
+      image: "/src/assets/images/general/82.jpg"
     }
   ]
 

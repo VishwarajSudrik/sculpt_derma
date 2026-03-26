@@ -26,36 +26,6 @@ const Contact = () => {
     console.log('Contact form submitted:', formData)
   }
 
-  const clinics = [
-    {
-      name: "Sculpt Derma, Kharadi",
-      address: "First Floor, UG 06, Clover Galleria, Fountain Road, near Forest County Gate 4, EON Free Zone, Kharadi, Pune, Maharashtra 411014",
-      phone: "+91 8983626437",
-      email: "sculptdermaofficial@gmail.com",
-      hours: "Mon-Sun: 10 am – 9 pm",
-      mapLink: "https://maps.google.com/?q=Sculpt+Derma+Kharadi",
-      image: "/src/assets/img/80.jpg"
-    },
-    {
-      name: "Sculpt Derma, Wakad",
-      address: "Shop No.1, Western High St, opposite to Phoenix mall, Shankar Kalat Nagar, Wakad, Pune, Pimpri-Chinchwad, Maharashtra 411057",
-      phone: "+91 8983626437",
-      email: "sculptdermaofficial@gmail.com",
-      hours: "Mon-Sun: 10 am – 9 pm",
-      mapLink: "https://maps.google.com/?q=Sculpt+Derma+Wakad",
-      image: "/src/assets/img/81.jpg"
-    },
-    {
-      name: "Sculpt Derma, Baner",
-      address: "Unit 601, 6th floor, Shivam Regency, Baner Rd, above Jyoti Appliances, Baner Gaon, Baner, Pune, Maharashtra 411069",
-      phone: "+91 8983626437",
-      email: "sculptdermaofficial@gmail.com",
-      hours: "Mon-Sun: 10 am – 9 pm",
-      mapLink: "https://maps.google.com/?q=Sculpt+Derma+Baner",
-      image: "/src/assets/img/82.jpg"
-    }
-  ]
-
   const faqs = [
     {
       question: "How do I book an appointment?",
@@ -345,53 +315,149 @@ const Contact = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {clinics.map((clinic, index) => (
-              <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <div className="aspect-video overflow-hidden bg-gray-100 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <MapPin className="w-8 h-8 text-primary-600" />
-                    </div>
-                    <p className="text-gray-600 font-medium">{clinic.name}</p>
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <div className="aspect-video overflow-hidden relative">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.123456789!2d73.8567!3d18.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0!2zMThCsDUwNC4x!5e0!3m2!1sen!2sin!4v1234567890"
+                  className="w-full h-full border-0"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Sculpt Derma Kharadi Location"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Sculpt Derma, Kharadi</h3>
+                <div className="space-y-4 text-sm">
+                  <div className="flex items-start">
+                    <MapPin className="w-4 h-4 mr-3 text-primary-600 mt-0.5 flex-shrink-0" />
+                    <p className="text-gray-600">First Floor, UG 06, Clover Galleria, Fountain Road, near Forest County Gate 4, EON Free Zone, Kharadi, Pune, Maharashtra 411014</p>
+                  </div>
+                  <div className="flex items-center">
+                    <Phone className="w-4 h-4 mr-3 text-primary-600 flex-shrink-0" />
+                    <span className="text-gray-600">+91 8983626437</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Mail className="w-4 h-4 mr-3 text-primary-600 flex-shrink-0" />
+                    <span className="text-gray-600">sculptdermaofficial@gmail.com</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Clock className="w-4 h-4 mr-3 text-primary-600 flex-shrink-0" />
+                    <span className="text-gray-600">Mon-Sun: 10 am – 9 pm</span>
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{clinic.name}</h3>
-                  <div className="space-y-4 text-sm">
-                    <div className="flex items-start">
-                      <MapPin className="w-4 h-4 mr-3 text-primary-600 mt-0.5 flex-shrink-0" />
-                      <p className="text-gray-600">{clinic.address}</p>
-                    </div>
-                    <div className="flex items-center">
-                      <Phone className="w-4 h-4 mr-3 text-primary-600 flex-shrink-0" />
-                      <span className="text-gray-600">{clinic.phone}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Mail className="w-4 h-4 mr-3 text-primary-600 flex-shrink-0" />
-                      <span className="text-gray-600">{clinic.email}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Clock className="w-4 h-4 mr-3 text-primary-600 flex-shrink-0" />
-                      <span className="text-gray-600">{clinic.hours}</span>
-                    </div>
-                  </div>
-                  <div className="mt-6 space-y-3">
-                    <a
-                      href={clinic.mapLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-secondary w-full text-center block"
-                    >
-                      <MapPin className="w-4 h-4 mr-2 inline" />
-                      Get Directions
-                    </a>
-                    <Link to="/appointment" className="btn-primary w-full text-center block">
-                      Book at This Clinic
-                    </Link>
-                  </div>
+                <div className="mt-6 space-y-3">
+                  <a
+                    href="https://maps.google.com/?q=Sculpt+Derma+Kharadi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary w-full text-center block"
+                  >
+                    <MapPin className="w-4 h-4 mr-2 inline" />
+                    Get Directions
+                  </a>
+                  <Link to="/appointment" className="btn-primary w-full text-center block">
+                    Book at This Clinic
+                  </Link>
                 </div>
               </div>
-            ))}
+            </div>
+            
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <div className="aspect-video overflow-hidden relative">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.123456789!2d73.7771!3d18.5994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0!2zMThCsDU5OS40!5e0!3m2!1sen!2sin!4v1234567890"
+                  className="w-full h-full border-0"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Sculpt Derma Wakad Location"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Sculpt Derma, Wakad</h3>
+                <div className="space-y-4 text-sm">
+                  <div className="flex items-start">
+                    <MapPin className="w-4 h-4 mr-3 text-primary-600 mt-0.5 flex-shrink-0" />
+                    <p className="text-gray-600">Shop No.1, Western High St, opposite to Phoenix mall, Shankar Kalat Nagar, Wakad, Pune, Pimpri-Chinchwad, Maharashtra 411057</p>
+                  </div>
+                  <div className="flex items-center">
+                    <Phone className="w-4 h-4 mr-3 text-primary-600 flex-shrink-0" />
+                    <span className="text-gray-600">+91 8983626437</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Mail className="w-4 h-4 mr-3 text-primary-600 flex-shrink-0" />
+                    <span className="text-gray-600">sculptdermaofficial@gmail.com</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Clock className="w-4 h-4 mr-3 text-primary-600 flex-shrink-0" />
+                    <span className="text-gray-600">Mon-Sun: 10 am – 9 pm</span>
+                  </div>
+                </div>
+                <div className="mt-6 space-y-3">
+                  <a
+                    href="https://maps.google.com/?q=Sculpt+Derma+Wakad"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary w-full text-center block"
+                  >
+                    <MapPin className="w-4 h-4 mr-2 inline" />
+                    Get Directions
+                  </a>
+                  <Link to="/appointment" className="btn-primary w-full text-center block">
+                    Book at This Clinic
+                  </Link>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <div className="aspect-video overflow-hidden relative">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.123456789!2d73.7898!3d18.5642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0!2zMThCsDU2NDIuM!5e0!3m2!1sen!2sin!4v1234567890"
+                  className="w-full h-full border-0"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Sculpt Derma Baner Location"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Sculpt Derma, Baner</h3>
+                <div className="space-y-4 text-sm">
+                  <div className="flex items-start">
+                    <MapPin className="w-4 h-4 mr-3 text-primary-600 mt-0.5 flex-shrink-0" />
+                    <p className="text-gray-600">Unit 601, 6th floor, Shivam Regency, Baner Rd, above Jyoti Appliances, Baner Gaon, Baner, Pune, Maharashtra 411069</p>
+                  </div>
+                  <div className="flex items-center">
+                    <Phone className="w-4 h-4 mr-3 text-primary-600 flex-shrink-0" />
+                    <span className="text-gray-600">+91 8983626437</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Mail className="w-4 h-4 mr-3 text-primary-600 flex-shrink-0" />
+                    <span className="text-gray-600">sculptdermaofficial@gmail.com</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Clock className="w-4 h-4 mr-3 text-primary-600 flex-shrink-0" />
+                    <span className="text-gray-600">Mon-Sun: 10 am – 9 pm</span>
+                  </div>
+                </div>
+                <div className="mt-6 space-y-3">
+                  <a
+                    href="https://maps.google.com/?q=Sculpt+Derma+Baner"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary w-full text-center block"
+                  >
+                    <MapPin className="w-4 h-4 mr-2 inline" />
+                    Get Directions
+                  </a>
+                  <Link to="/appointment" className="btn-primary w-full text-center block">
+                    Book at This Clinic
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

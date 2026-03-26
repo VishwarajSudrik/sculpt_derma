@@ -5,141 +5,212 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  
+
   body {
-    font-family: 'Inter', system-ui, sans-serif;
-    @apply text-gray-900 bg-white;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    @apply text-secondary-900 bg-white;
+    letter-spacing: -0.01em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-serif {
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: -0.02em;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-primary-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-700 transition-colors duration-200 shadow-lg hover:shadow-xl;
-  }
-  
-  .animate-scroll {
-    animation: scroll 20s linear infinite;
-  }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+    @apply bg-gold-gradient text-white px-8 py-4 rounded-full font-bold transition-all duration-500 shadow-premium hover:shadow-xl hover:-translate-y-1 active:scale-95 flex items-center justify-center;
   }
 
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-  
   .btn-secondary {
-    @apply bg-white text-primary-600 border-2 border-primary-600 px-6 py-3 rounded-lg font-medium hover:bg-primary-50 transition-colors duration-200;
+    @apply bg-white text-primary-600 border border-primary-200 px-8 py-4 rounded-full font-bold hover:bg-primary-50 transition-all duration-300 flex items-center justify-center;
   }
 
-  /* Modern Scrollbar Styling */
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-soft rounded-3xl transition-all duration-500 hover:bg-white/90;
+  }
+
+  .premium-border {
+    @apply border border-primary-100/50 hover:border-primary-400/30 transition-colors duration-500;
+  }
+
+  .text-gradient {
+    @apply bg-gold-gradient bg-clip-text text-transparent;
+  }
+
+  .glow-on-hover:hover {
+    box-shadow: 0 0 30px rgba(184, 138, 90, 0.2);
+  }
+
+  .section-padding {
+    @apply py-20 lg:py-32;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-6 lg:px-12;
+  }
+
+  /* Decorative scrollbar */
   .modern-scrollbar::-webkit-scrollbar {
-    height: 12px;
-    width: 12px;
+    width: 6px;
   }
 
   .modern-scrollbar::-webkit-scrollbar-track {
-    background: #f1f5f9;
-    border-radius: 10px;
-    border: 1px solid #e2e8f0;
+    @apply bg-primary-100;
   }
 
   .modern-scrollbar::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #e11d48 0%, #dc2626 100%);
-    border-radius: 10px;
-    border: 2px solid #f1f5f9;
-    transition: all 0.3s ease;
+    @apply bg-primary-400 rounded-full hover:bg-primary-500;
   }
 
-  .modern-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
-    transform: scale(1.1);
+  .mask-organic {
+    mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M43.3,-75.6C56.1,-68.4,66.6,-56.3,74.2,-42.6C81.8,-28.9,86.6,-13.6,85.7,1.5C84.8,16.7,78.2,31.7,68.9,44.2C59.6,56.7,47.7,66.7,34.2,73.1C20.6,79.5,5.6,82.4,-9.1,80.7C-23.8,79,-38.2,72.7,-50,63.6C-61.8,54.5,-71,42.6,-77.3,29.3C-83.6,16,-87,1.3,-84.9,-12.3C-82.9,-25.9,-75.4,-38.4,-65.4,-48.5C-55.5,-58.6,-43.1,-66.2,-30.2,-73.3C-17.3,-80.4,-3.8,-87,10.1,-86.3C24,-85.7,30.5,-82.8,43.3,-75.6Z" fill="white" transform="translate(100 100)" /></svg>');
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M43.3,-75.6C56.1,-68.4,66.6,-56.3,74.2,-42.6C81.8,-28.9,86.6,-13.6,85.7,1.5C84.8,16.7,78.2,31.7,68.9,44.2C59.6,56.7,47.7,66.7,34.2,73.1C20.6,79.5,5.6,82.4,-9.1,80.7C-23.8,79,-38.2,72.7,-50,63.6C-61.8,54.5,-71,42.6,-77.3,29.3C-83.6,16,-87,1.3,-84.9,-12.3C-82.9,-25.9,-75.4,-38.4,-65.4,-48.5C-55.5,-58.6,-43.1,-66.2,-30.2,-73.3C-17.3,-80.4,-3.8,-87,10.1,-86.3C24,-85.7,30.5,-82.8,43.3,-75.6Z" fill="white" transform="translate(100 100)" /></svg>');
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
   }
 
-  .modern-scrollbar::-webkit-scrollbar-corner {
-    background: #f1f5f9;
+  .premium-frame {
+    @apply relative p-3 border border-primary-200/50 rounded-[40px] bg-white shadow-soft;
   }
 
-  /* Firefox scrollbar styling */
-  .modern-scrollbar {
-    scrollbar-width: thin;
-    scrollbar-color: #e11d48 #f1f5f9;
+  .premium-frame::before {
+    content: '';
+    @apply absolute inset-0 border-[0.5px] border-primary-300/30 rounded-[40px] -m-1 pointer-events-none;
   }
 
-  /* Hide scrollbar but keep functionality */
-  .hide-scrollbar-line::-webkit-scrollbar {
-    display: none;
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
   }
 
-  .hide-scrollbar-line {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  .reveal-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
   }
 
-  .hide-scrollbar-line::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .section-padding {
-    @apply py-16 lg:py-24;
-  }
-  
-  .container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
-  
-  .text-gradient {
-    @apply bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent;
+  .shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
   }
 
-  /* Blog specific styles */
-  .prose h2 {
-    @apply text-2xl font-bold text-gray-900 mt-8 mb-4;
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+
+    100% {
+      background-position: 200% 0;
+    }
   }
 
-  .prose h3 {
-    @apply text-xl font-semibold text-gray-900 mt-6 mb-3;
+  .reveal-text {
+    @apply relative overflow-hidden;
   }
 
-  .prose p {
-    @apply text-gray-700 leading-relaxed mb-4;
+  .reveal-text::after {
+    content: '';
+    @apply absolute inset-0 bg-primary-500 transform translate-x-full transition-transform duration-700 ease-in-out;
   }
 
-  .prose ul {
-    @apply list-disc list-inside space-y-2 mb-4;
+  .reveal-text.active::after {
+    @apply -translate-x-full;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
   }
 
-  .prose li {
-    @apply text-gray-700;
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Floating ambient circles */
+.ambient-circle {
+  @apply absolute rounded-full blur-[120px] mix-blend-multiply opacity-20 animate-pulse;
+}
+
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
   }
 
-  .prose strong {
-    @apply font-semibold text-gray-900;
+  100% {
+    transform: translateX(-50%);
   }
+}
 
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+.animate-marquee-scroll {
+  animation: marquee-scroll 10s linear infinite;
+}
+
+.animate-marquee-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Parallax and floating effects */
+.parallax-bg {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.floating-element {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.floating-element-reverse {
+  animation: float-slow-reverse 10s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
   }
+  25% {
+    transform: translateY(-15px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(-20px) rotate(0.5deg);
+  }
+}
 
-  .line-clamp-3 {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+@keyframes float-slow-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(20px) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(1deg);
+  }
+  75% {
+    transform: translateY(25px) rotate(-0.5deg);
   }
 }
