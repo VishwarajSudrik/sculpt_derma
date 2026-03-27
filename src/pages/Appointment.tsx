@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Phone, Mail, Clock, MapPin, CheckCircle, ArrowRight, Calendar, User, Stethoscope } from 'lucide-react'
+import { clinicImages } from '../utils/imageImports'
 
 const Appointment = () => {
   const [formData, setFormData] = useState({
@@ -61,17 +63,17 @@ const Appointment = () => {
     {
       name: "Sculpt Derma, Kharadi",
       address: "Clover Galleria, Fountain Road, near Forest County Gate 4, EON Free Zone, Kharadi",
-      image: "/src/assets/images/general/80.jpg"
+      image: clinicImages.kharadi
     },
     {
       name: "Sculpt Derma, Wakad",
       address: "Western High St, opposite to Phoenix mall, Shankar Kalat Nagar, Wakad",
-      image: "/src/assets/images/general/81.jpg"
+      image: clinicImages.wakad
     },
     {
       name: "Sculpt Derma, Baner",
       address: "Shivam Regency, Baner Rd, above Jyoti Appliances, Baner",
-      image: "/src/assets/images/general/82.jpg"
+      image: clinicImages.baner
     }
   ]
 
@@ -149,21 +151,78 @@ const Appointment = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-50 to-white section-padding overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary-50 via-accent-50 to-white section-padding overflow-hidden">
+        {/* Booking Theme Background */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-10 left-20 w-32 h-32 bg-primary-300 rounded-full blur-2xl"></div>
+          <div className="absolute top-40 right-20 w-40 h-40 bg-accent-300 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-20 left-1/3 w-36 h-36 bg-primary-300 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-40 right-1/3 w-44 h-44 bg-accent-300 rounded-full blur-2xl"></div>
+        </div>
+        
+        {/* Calendar/Clock Icons */}
+        <div className="absolute top-20 left-10 text-primary-200 opacity-20">
+          <svg className="w-20 h-20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+          </svg>
+        </div>
+        <div className="absolute top-32 right-16 text-accent-200 opacity-20">
+          <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+          </svg>
+        </div>
+        <div className="absolute bottom-20 left-20 text-primary-200 opacity-20">
+          <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+        </div>
+        
         <div className="container relative z-10">
           <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center px-4 py-2 bg-primary-100 rounded-full mb-6">
+              <span className="text-primary-700 text-sm font-medium">📅 Easy Booking</span>
+            </div>
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">
               Book Your
               <span className="text-gradient"> Appointment</span>
             </h1>
-            <p className="text-lg text-gray-600 mb-8">
-              Take the first step towards your aesthetic transformation. Schedule a consultation with our expert team today.
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              Take the first step towards your aesthetic transformation. Schedule a consultation with our expert team today and begin your journey to confidence and beauty.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a href="tel:+918983626437" className="btn-primary">
                 <Phone className="w-4 h-4 mr-2 inline" />
                 Quick Booking: +91 8983626437
               </a>
+              <Link to="/services" className="btn-secondary">
+                View Services First
+                <ArrowRight className="w-4 h-4 ml-2 inline" />
+              </Link>
+            </div>
+            
+            {/* Booking Features */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+              <div className="text-center p-6 bg-white/80 backdrop-blur rounded-2xl border border-primary-100">
+                <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Clock className="w-6 h-6 text-primary-600" />
+                </div>
+                <div className="font-semibold text-gray-900 mb-1">Same Day Booking</div>
+                <div className="text-sm text-gray-600">Available appointments</div>
+              </div>
+              <div className="text-center p-6 bg-white/80 backdrop-blur rounded-2xl border border-accent-100">
+                <div className="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <MapPin className="w-6 h-6 text-accent-600" />
+                </div>
+                <div className="font-semibold text-gray-900 mb-1">3 Clinics</div>
+                <div className="text-sm text-gray-600">Convenient locations</div>
+              </div>
+              <div className="text-center p-6 bg-white/80 backdrop-blur rounded-2xl border border-primary-100">
+                <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <CheckCircle className="w-6 h-6 text-primary-600" />
+                </div>
+                <div className="font-semibold text-gray-900 mb-1">Expert Consultation</div>
+                <div className="text-sm text-gray-600">Personalized treatment plans</div>
+              </div>
             </div>
           </div>
         </div>

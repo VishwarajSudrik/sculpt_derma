@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Star, Phone, Calendar, CheckCircle, Clock } from 'lucide-react'
+import { serviceImages, getImageUrl } from '../utils/imageImports'
 
 const Services = () => {
   const surgicalServices = [
@@ -7,8 +8,8 @@ const Services = () => {
       name: "Breast Implants",
       description: "Our breast implant clinic provides expert, safe, and advanced procedures to enhance shape, size, and symmetry of your breasts. Designed to create natural-looking, beautifully contoured results.",
       price: "Rs. 1.4L",
-      image: "/src/assets/images/general/Breast-Augmentation-with-Implant.jpg",
-      detailImage: "/src/assets/images/general/43.jpg",
+      image: serviceImages.breastAugmentation,
+      detailImage: getImageUrl('43.jpg'),
       duration: "2-3 hours",
       recovery: "1-2 weeks",
       features: ["FDA-approved implants", "Minimal scarring", "Natural-looking results", "Customized to body goals"]
@@ -17,8 +18,8 @@ const Services = () => {
       name: "Mommy Makeover",
       description: "Comprehensive package combining multiple procedures to restore your pre-pregnancy body shape and confidence.",
       price: "Starting from Rs. 2.2L",
-      image: "/src/assets/images/general/Mommy-Makeover.jpg",
-      detailImage: "/src/assets/images/general/44.jpg",
+      image: serviceImages.mommyMakeover,
+      detailImage: getImageUrl('44.jpg'),
       duration: "4-6 hours",
       recovery: "2-4 weeks",
       features: ["Multiple procedures", "Full body transformation", "Customized approach", "Expert care"]
@@ -27,8 +28,8 @@ const Services = () => {
       name: "Rhinoplasty",
       description: "Reshape your nose with precision and artistry for harmonious facial proportions and improved breathing.",
       price: "Starting from Rs. 80K",
-      image: "/src/assets/images/general/Rhinoplasty-1.jpg",
-      detailImage: "/src/assets/images/general/45.jpg",
+      image: serviceImages.rhinoplasty,
+      detailImage: getImageUrl('45.jpg'),
       duration: "2-3 hours",
       recovery: "1-2 weeks",
       features: ["Closed/open technique", "Breathing improvement", "Natural appearance", "Minimal downtime"]
@@ -37,8 +38,8 @@ const Services = () => {
       name: "Breast Reduction",
       description: "Reduce breast size and alleviate discomfort while achieving a more proportionate and lifted appearance.",
       price: "Rs. 80K",
-      image: "/src/assets/images/general/Breast-Implant-Surgery.jpg",
-      detailImage: "/src/assets/images/general/46.jpg",
+      image: serviceImages.breastImplantSurgery,
+      detailImage: getImageUrl('46.jpg'),
       duration: "3-4 hours",
       recovery: "2-3 weeks",
       features: ["Symmetry improvement", "Relief from discomfort", "Natural contour", "Quick recovery"]
@@ -47,8 +48,8 @@ const Services = () => {
       name: "Liposuction",
       description: "Advanced body contouring techniques to remove stubborn fat deposits effectively and sculpt your body.",
       price: "Starting from Rs. 60K",
-      image: "/src/assets/images/general/Liposuction-2-1.jpg",
-      detailImage: "/src/assets/images/general/47.jpg",
+      image: serviceImages.liposuction,
+      detailImage: getImageUrl('47.jpg'),
       duration: "2-4 hours",
       recovery: "1-2 weeks",
       features: ["360-degree liposuction", "VASER technology", "Minimal invasion", "Quick recovery"]
@@ -57,8 +58,8 @@ const Services = () => {
       name: "Gynecomastia",
       description: "Male breast reduction surgery to restore chest confidence and masculinity with minimal visible scars.",
       price: "Starting from Rs. 70K",
-      image: "/src/assets/images/general/Gynecomastia-Surgery-Pune.jpg",
-      detailImage: "/src/assets/images/general/48.jpg",
+      image: serviceImages.gynecomastia,
+      detailImage: getImageUrl('48.jpg'),
       duration: "1-2 hours",
       recovery: "1 week",
       features: ["Minimal scarring", "Natural chest contour", "Quick recovery", "Confidence boost"]
@@ -67,8 +68,8 @@ const Services = () => {
       name: "Tummy Tuck (Abdominoplasty)",
       description: "Flatten and tighten your abdomen with our advanced abdominoplasty procedures and muscle repair.",
       price: "Starting from Rs. 80K",
-      image: "/src/assets/images/general/Tummy-Tuck-Abdominoplasty.jpg",
-      detailImage: "/src/assets/images/general/49.jpg",
+      image: serviceImages.tummyTuck,
+      detailImage: getImageUrl('49.jpg'),
       duration: "3-4 hours",
       recovery: "2-4 weeks",
       features: ["Muscle repair", "Skin tightening", "Belly button reconstruction", "Long-lasting results"]
@@ -77,8 +78,8 @@ const Services = () => {
       name: "Neck Lift",
       description: "Rejuvenate your neck and jawline with our advanced neck lift procedures for a youthful appearance.",
       price: "Starting from Rs. 90K",
-      image: "/src/assets/images/general/50.jpg",
-      detailImage: "/src/assets/images/general/50.jpg",
+      image: serviceImages.neckLift,
+      detailImage: serviceImages.neckLift,
       duration: "2-3 hours",
       recovery: "1-2 weeks",
       features: ["Minimal scarring", "Natural jawline", "Quick recovery", "Long-lasting results"]
@@ -87,8 +88,8 @@ const Services = () => {
       name: "Labiaplasty",
       description: "Cosmetic surgical procedure to improve the appearance of the labia for enhanced comfort and confidence.",
       price: "Starting from Rs. 60K",
-      image: "/src/assets/images/general/Labioplasty.jpg",
-      detailImage: "/src/assets/images/general/51.jpg",
+      image: serviceImages.labiaplasty,
+      detailImage: getImageUrl('51.jpg'),
       duration: "1-2 hours",
       recovery: "1-2 weeks",
       features: ["Minimal discomfort", "Quick recovery", "Natural appearance", "Enhanced comfort"]
@@ -97,8 +98,8 @@ const Services = () => {
       name: "Cheek Augmentation",
       description: "Enhance facial contours and achieve more defined cheekbones with our advanced augmentation procedures.",
       price: "Starting from Rs. 50K",
-      image: "/src/assets/images/general/52.jpg",
-      detailImage: "/src/assets/images/general/52.jpg",
+      image: serviceImages.cheekAugmentation,
+      detailImage: serviceImages.cheekAugmentation,
       duration: "1-2 hours",
       recovery: "1 week",
       features: ["Natural enhancement", "Quick procedure", "Minimal recovery", "Balanced appearance"]
@@ -107,8 +108,8 @@ const Services = () => {
       name: "Arm Lift",
       description: "Remove excess skin and fat from upper arms for a more toned and youthful appearance.",
       price: "Starting from Rs. 70K",
-      image: "/src/assets/images/general/Arm-Lift.jpg",
-      detailImage: "/src/assets/images/general/53.jpg",
+      image: serviceImages.armLift,
+      detailImage: getImageUrl('53.jpg'),
       duration: "2-3 hours",
       recovery: "2-3 weeks",
       features: ["Minimal scarring", "Natural contour", "Quick recovery", "Toned appearance"]
@@ -117,8 +118,8 @@ const Services = () => {
       name: "Vaginoplasty",
       description: "Cosmetic vaginal tightening procedure to enhance both appearance and function.",
       price: "Starting from Rs. 60K",
-      image: "/src/assets/images/general/Vaginoplasty.jpg",
-      detailImage: "/src/assets/images/general/54.jpg",
+      image: serviceImages.vaginoplasty,
+      detailImage: getImageUrl('54.jpg'),
       duration: "1-2 hours",
       recovery: "4-6 weeks",
       features: ["Enhanced function", "Natural appearance", "Quick recovery", "Improved confidence"]
@@ -127,8 +128,8 @@ const Services = () => {
       name: "Vaginal Reconstruction",
       description: "Comprehensive vaginal reconstruction procedures for both aesthetic and functional improvements.",
       price: "Starting from Rs. 80K",
-      image: "/src/assets/images/general/Vaginal-Resconstruction.jpg",
-      detailImage: "/src/assets/images/general/55.jpg",
+      image: serviceImages.vaginalReconstruction,
+      detailImage: getImageUrl('55.jpg'),
       duration: "2-3 hours",
       recovery: "4-6 weeks",
       features: ["Functional improvement", "Natural appearance", "Customized approach", "Expert care"]
@@ -141,8 +142,8 @@ const Services = () => {
       description: "Restore volume and youthfulness with premium hyaluronic acid fillers for instant results.",
       price: "Starting from Rs. 15,000",
       duration: "6-12 months",
-      image: "/src/assets/images/general/Dermal-Fillers.jpg",
-      detailImage: "/src/assets/images/general/56.jpg",
+      image: serviceImages.dermalFillers,
+      detailImage: getImageUrl('56.jpg'),
       sessionTime: "30-45 mins",
       features: ["Instant results", "No downtime", "Natural look", "FDA-approved"]
     },
@@ -151,8 +152,8 @@ const Services = () => {
       description: "Smooth wrinkles and fine lines with our expert Botox treatments for natural rejuvenation.",
       price: "Starting from Rs. 8,000",
       duration: "4-6 months",
-      image: "/src/assets/images/general/57.jpg",
-      detailImage: "/src/assets/images/general/57.jpg",
+      image: serviceImages.botox,
+      detailImage: serviceImages.botox,
       sessionTime: "15-30 mins",
       features: ["Quick procedure", "Minimal discomfort", "Natural expression", "Proven safety"]
     },
@@ -161,8 +162,8 @@ const Services = () => {
       description: "Permanent hair reduction using advanced laser technology for all skin types.",
       price: "Starting from Rs. 3,000/session",
       duration: "Permanent results",
-      image: "/src/assets/images/general/58.jpg",
-      detailImage: "/src/assets/images/general/58.jpg",
+      image: serviceImages.laserHairRemoval,
+      detailImage: serviceImages.laserHairRemoval,
       sessionTime: "30-60 mins",
       features: ["All skin types", "Pain-free", "Quick sessions", "Lasting results"]
     },
@@ -171,8 +172,8 @@ const Services = () => {
       description: "Advanced treatments to clear acne scars and achieve smooth, clear skin.",
       price: "Starting from Rs. 5,000",
       duration: "Multiple sessions",
-      image: "/src/assets/images/general/59.jpg",
-      detailImage: "/src/assets/images/general/59.jpg",
+      image: serviceImages.acneScars,
+      detailImage: serviceImages.acneScars,
       sessionTime: "45-60 mins",
       features: ["Multiple technologies", "Customized plans", "Visible improvement", "Safe procedures"]
     },
@@ -181,8 +182,8 @@ const Services = () => {
       description: "Specialized treatments for hyperpigmentation and melasma for even skin tone.",
       price: "Starting from Rs. 4,000",
       duration: "Multiple sessions",
-      image: "/src/assets/images/general/60.jpg",
-      detailImage: "/src/assets/images/general/60.jpg",
+      image: serviceImages.melasma,
+      detailImage: serviceImages.melasma,
       sessionTime: "30-45 mins",
       features: ["Combination therapy", "Sun protection", "Even skin tone", "Long-lasting"]
     },
@@ -191,8 +192,8 @@ const Services = () => {
       description: "Advanced treatments to reduce freckles and achieve more even, clear skin complexion.",
       price: "Starting from Rs. 3,000",
       duration: "Multiple sessions",
-      image: "/src/assets/images/general/61.jpg",
-      detailImage: "/src/assets/images/general/61.jpg",
+      image: serviceImages.freckles,
+      detailImage: serviceImages.freckles,
       sessionTime: "30-45 mins",
       features: ["Gentle treatment", "Even complexion", "Quick recovery", "Visible results"]
     },
@@ -201,8 +202,8 @@ const Services = () => {
       description: "Rejuvenate your skin with our premium chemical peel treatments for glowing skin.",
       price: "Starting from Rs. 2,500",
       duration: "4-6 weeks",
-      image: "/src/assets/images/general/62.jpg",
-      detailImage: "/src/assets/images/general/62.jpg",
+      image: serviceImages.chemicalPeels,
+      detailImage: serviceImages.chemicalPeels,
       sessionTime: "30-45 mins",
       features: ["Multiple depths", "Customized strength", "Quick recovery", "Glowing skin"]
     },
@@ -211,8 +212,8 @@ const Services = () => {
       description: "Enhance lip volume and shape with premium dermal fillers for natural, fuller lips.",
       price: "Starting from Rs. 12,000",
       duration: "6-12 months",
-      image: "/src/assets/images/general/Lip-Fillers.jpg",
-      detailImage: "/src/assets/images/general/63.jpg",
+      image: serviceImages.lipFillers,
+      detailImage: getImageUrl('63.jpg'),
       sessionTime: "30-45 mins",
       features: ["Natural enhancement", "Instant results", "Minimal discomfort", "FDA-approved"]
     },
@@ -221,8 +222,8 @@ const Services = () => {
       description: "Lift and tighten facial skin without surgery using advanced non-invasive techniques.",
       price: "Starting from Rs. 25,000",
       duration: "6-12 months",
-      image: "/src/assets/images/general/64.jpg",
-      detailImage: "/src/assets/images/general/64.jpg",
+      image: serviceImages.nonSurgicalFacelift,
+      detailImage: serviceImages.nonSurgicalFacelift,
       sessionTime: "60-90 mins",
       features: ["No surgery", "Natural lift", "Quick recovery", "Long-lasting results"]
     },
@@ -231,8 +232,8 @@ const Services = () => {
       description: "Complete body contouring with our advanced 360-degree liposuction technique.",
       price: "Starting from Rs. 1.5L",
       duration: "Permanent",
-      image: "/src/assets/images/general/360-Deg.-Lepictomy.jpg",
-      detailImage: "/src/assets/images/general/65.jpg",
+      image: serviceImages.liposuction360,
+      detailImage: getImageUrl('65.jpg'),
       sessionTime: "3-4 hours",
       features: ["Complete contouring", "Advanced technique", "Dramatic results", "Single procedure"]
     }
@@ -259,15 +260,43 @@ const Services = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-50 to-white section-padding">
-        <div className="container">
+      <section className="relative bg-gradient-to-br from-accent-50 via-primary-50 to-white section-padding overflow-hidden">
+        {/* Medical Theme Background Elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-64 h-64 border-4 border-accent-200 rounded-full"></div>
+          <div className="absolute top-32 left-32 w-48 h-48 border-4 border-primary-200 rounded-full"></div>
+          <div className="absolute bottom-20 right-10 w-72 h-72 border-4 border-accent-200 rounded-full"></div>
+          <div className="absolute bottom-32 right-32 w-56 h-56 border-4 border-primary-200 rounded-full"></div>
+        </div>
+        
+        {/* Floating Medical Icons */}
+        <div className="absolute top-16 left-1/4 text-accent-200 opacity-20">
+          <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+          </svg>
+        </div>
+        <div className="absolute top-32 right-1/4 text-primary-200 opacity-20">
+          <svg className="w-20 h-20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+          </svg>
+        </div>
+        <div className="absolute bottom-20 left-1/3 text-accent-200 opacity-20">
+          <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+        </div>
+        
+        <div className="container relative z-10">
           <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center px-4 py-2 bg-accent-100 rounded-full mb-6">
+              <span className="text-accent-700 text-sm font-medium">✨ Medical Excellence</span>
+            </div>
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">
               Our Premium
               <span className="text-gradient"> Aesthetic Services</span>
             </h1>
-            <p className="text-lg text-gray-600 mb-8">
-              Comprehensive range of surgical and non-surgical treatments delivered by expert medical professionals in a safe, clinical environment.
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              Comprehensive range of surgical and non-surgical treatments delivered by expert medical professionals in a safe, clinical environment. Transform your appearance with precision and care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/appointment" className="btn-primary">
@@ -276,8 +305,24 @@ const Services = () => {
               </Link>
               <a href="tel:+918983626437" className="btn-secondary">
                 <Phone className="w-4 h-4 mr-2 inline" />
-                Call Expert
+                Call: +91 8983626437
               </a>
+            </div>
+            
+            {/* Service Stats */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-3xl mx-auto">
+              <div className="text-center p-6 bg-white/80 backdrop-blur rounded-2xl border border-accent-100">
+                <div className="text-3xl font-bold text-accent-600 mb-2">25+</div>
+                <div className="text-sm text-gray-600">Aesthetic Services</div>
+              </div>
+              <div className="text-center p-6 bg-white/80 backdrop-blur rounded-2xl border border-primary-100">
+                <div className="text-3xl font-bold text-primary-600 mb-2">15+</div>
+                <div className="text-sm text-gray-600">Expert Doctors</div>
+              </div>
+              <div className="text-center p-6 bg-white/80 backdrop-blur rounded-2xl border border-accent-100">
+                <div className="text-3xl font-bold text-accent-600 mb-2">5000+</div>
+                <div className="text-sm text-gray-600">Happy Clients</div>
+              </div>
             </div>
           </div>
         </div>
@@ -489,22 +534,17 @@ const Services = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { step: "01", title: "Consultation", description: "Free initial consultation to discuss your goals", image: "/src/assets/images/general/66.jpg" },
-              { step: "02", title: "Planning", description: "Customized treatment plan tailored to you", image: "/src/assets/images/general/67.jpg" },
-              { step: "03", title: "Treatment", description: "Expert procedure in our state-of-the-art facility", image: "/src/assets/images/general/68.jpg" },
-              { step: "04", title: "Aftercare", description: "Comprehensive follow-up care and support", image: "/src/assets/images/general/69.jpg" }
+              { step: "01", title: "Consultation", description: "Free initial consultation to discuss your goals" },
+              { step: "02", title: "Planning", description: "Customized treatment plan tailored to you" },
+              { step: "03", title: "Treatment", description: "Expert procedure in our state-of-the-art facility" },
+              { step: "04", title: "Aftercare", description: "Comprehensive follow-up care and support" }
             ].map((item, index) => (
               <div key={index} className="text-center group">
                 <div className="relative mb-6">
-                  <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
-                    <img 
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold">
-                    {item.step}
+                  <div className="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto">
+                    <div className="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold">
+                      {item.step}
+                    </div>
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>

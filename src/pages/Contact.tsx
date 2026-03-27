@@ -102,25 +102,83 @@ const Contact = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-50 to-white section-padding overflow-hidden">
+      <section className="relative bg-gradient-to-br from-accent-50 via-primary-50 to-white section-padding overflow-hidden">
+        {/* Communication Theme Background */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-10 left-20 w-32 h-32 bg-primary-300 rounded-full blur-2xl"></div>
+          <div className="absolute top-40 right-20 w-40 h-40 bg-accent-300 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-20 left-1/3 w-36 h-36 bg-primary-300 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-40 right-1/3 w-44 h-44 bg-accent-300 rounded-full blur-2xl"></div>
+        </div>
+        
+        {/* Communication Icons */}
+        <div className="absolute top-20 left-10 text-primary-200 opacity-20">
+          <svg className="w-20 h-20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+        </div>
+        <div className="absolute top-32 right-16 text-accent-200 opacity-20">
+          <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+        </div>
+        <div className="absolute bottom-20 left-20 text-primary-200 opacity-20">
+          <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+        </div>
+        <div className="absolute bottom-32 right-10 text-accent-200 opacity-20">
+          <svg className="w-28 h-28" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.6 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.6-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+        </div>
+        
         <div className="container relative z-10">
           <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center px-4 py-2 bg-accent-100 rounded-full mb-6">
+              <span className="text-accent-700 text-sm font-medium">📞 Get in Touch</span>
+            </div>
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">
               Contact
               <span className="text-gradient"> SculptDerma</span>
             </h1>
-            <p className="text-lg text-gray-600 mb-8">
-              Get in touch with our expert team for consultations, appointments, or any questions about our aesthetic services.
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              Get in touch with our expert team for consultations, appointments, or any questions about our aesthetic services. We're here to help you on your beauty journey.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link to="/appointment" className="btn-primary">
                 <Calendar className="w-4 h-4 mr-2 inline" />
                 Book Appointment
               </Link>
               <a href="tel:+918983626437" className="btn-secondary">
                 <Phone className="w-4 h-4 mr-2 inline" />
-                Call Now
+                Call Now: +91 8983626437
               </a>
+            </div>
+            
+            {/* Contact Methods */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+              <div className="text-center p-6 bg-white/80 backdrop-blur rounded-2xl border border-primary-100">
+                <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Phone className="w-6 h-6 text-primary-600" />
+                </div>
+                <div className="font-semibold text-gray-900 mb-1">Phone Support</div>
+                <div className="text-sm text-gray-600">24/7 Available</div>
+              </div>
+              <div className="text-center p-6 bg-white/80 backdrop-blur rounded-2xl border border-accent-100">
+                <div className="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Mail className="w-6 h-6 text-accent-600" />
+                </div>
+                <div className="font-semibold text-gray-900 mb-1">Email Response</div>
+                <div className="text-sm text-gray-600">Within 24 hours</div>
+              </div>
+              <div className="text-center p-6 bg-white/80 backdrop-blur rounded-2xl border border-primary-100">
+                <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <MapPin className="w-6 h-6 text-primary-600" />
+                </div>
+                <div className="font-semibold text-gray-900 mb-1">3 Locations</div>
+                <div className="text-sm text-gray-600">Pune, India</div>
+              </div>
             </div>
           </div>
         </div>

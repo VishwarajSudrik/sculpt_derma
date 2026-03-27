@@ -112,7 +112,7 @@ const Navbar = () => {
           <Link to="/" className="flex-shrink-0 flex items-center group">
             <div className="relative">
               <img 
-                src="/src/assets/images/general/Sculpt-Logo-2.png" 
+                src="/images/general/Sculpt-Logo-2.png" 
                 alt="Sculpt Derma"
                 className="h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-110"
                 onError={(e) => {

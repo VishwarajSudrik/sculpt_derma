@@ -51,7 +51,7 @@ const Blog = () => {
       date: 'January 13, 2025',
       readTime: '5 min read',
       category: 'Treatments & Procedures',
-      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       tags: ['Liposuction', 'Surgical', 'Body Contouring', 'Fat Removal']
     },
     {
@@ -83,7 +83,7 @@ const Blog = () => {
       date: 'January 12, 2025',
       readTime: '6 min read',
       category: 'Inspiration',
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       tags: ['Facial Contouring', 'Body Sculpting', 'Aesthetic Surgery', 'Non-Surgical']
     },
     {
@@ -156,7 +156,7 @@ const Blog = () => {
       date: 'January 10, 2025',
       readTime: '5 min read',
       category: 'Inspiration',
-      image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.pexels.com/photos/3865548/pexels-photo-3865548.jpeg',
       tags: ['Laser Treatment', 'Facial Rejuvenation', 'Skin Resurfacing', 'Anti-aging']
     },
     {
@@ -196,7 +196,7 @@ const Blog = () => {
       date: 'January 8, 2025',
       readTime: '6 min read',
       category: 'Tips',
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.pexels.com/photos/5938568/pexels-photo-5938568.jpeg',
       tags: ['Mesotherapy', 'Non-Surgical', 'Skin Rejuvenation', 'Minimally Invasive']
     },
     {
@@ -257,7 +257,7 @@ const Blog = () => {
       date: 'January 7, 2025',
       readTime: '7 min read',
       category: 'Tips',
-      image: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.pexels.com/photos/6977864/pexels-photo-6977864.jpeg',
       tags: ['Skin Care', 'Hydration', 'Tips', 'Healthy Skin']
     },
     {
@@ -291,7 +291,7 @@ const Blog = () => {
       date: 'January 5, 2025',
       readTime: '5 min read',
       category: 'News',
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       tags: ['Dermal Fillers', 'Lip Fillers', 'Facial Aesthetics', 'Non-Surgical']
     },
     {
@@ -332,7 +332,7 @@ const Blog = () => {
       date: 'January 4, 2025',
       readTime: '4 min read',
       category: 'Aesthetics',
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       tags: ['Post-Treatment Care', 'Skin Care', 'Aesthetic Medicine', 'Recovery']
     },
     {
@@ -387,7 +387,7 @@ const Blog = () => {
       date: 'January 2, 2025',
       readTime: '6 min read',
       category: 'Inspiration',
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       tags: ['Anti-aging', 'Youthful Appearance', 'Skin Care', 'Prevention']
     }
   ]
@@ -407,17 +407,41 @@ const Blog = () => {
       <div className="min-h-screen bg-gradient-to-br from-primary-50 to-white">
         {/* Modern Hero Section */}
         <section className="relative overflow-hidden">
-          {/* Background Pattern */}
+          {/* Education/Knowledge Theme Background */}
           <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-10 left-10 w-72 h-72 bg-primary-300 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent-300 rounded-full blur-3xl"></div>
+            <div className="absolute top-0 left-0 w-80 h-80 bg-gradient-to-br from-primary-200 to-accent-200 rounded-full blur-3xl"></div>
+            <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-accent-200 to-primary-200 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-gradient-to-br from-primary-200 to-accent-200 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-1/4 w-56 h-56 bg-gradient-to-br from-accent-200 to-primary-200 rounded-full blur-3xl"></div>
+          </div>
+          
+          {/* Knowledge/Education Icons */}
+          <div className="absolute top-16 left-10 text-primary-200 opacity-20">
+            <svg className="w-20 h-20" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+            </svg>
+          </div>
+          <div className="absolute top-32 right-16 text-accent-200 opacity-20">
+            <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+            </svg>
+          </div>
+          <div className="absolute bottom-20 left-20 text-primary-200 opacity-20">
+            <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+            </svg>
+          </div>
+          <div className="absolute bottom-32 right-10 text-accent-200 opacity-20">
+            <svg className="w-28 h-28" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
           </div>
           
           <div className="relative section-padding py-12">
             <div className="container">
               <div className="text-center max-w-4xl mx-auto">
                 <div className="inline-flex items-center px-4 py-2 bg-primary-100 rounded-full mb-4">
-                  <span className="text-primary-700 text-sm font-medium">Expert Insights</span>
+                  <span className="text-primary-700 text-sm font-medium">📚 Expert Insights</span>
                 </div>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-4 leading-tight">
                   Medical Aesthetic
@@ -427,7 +451,21 @@ const Blog = () => {
                   Discover latest advances in aesthetic medicine, expert tips, and comprehensive guides to help you make informed decisions about your beauty journey.
                 </p>
                 
-               
+                {/* Blog Stats */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto mb-8">
+                  <div className="text-center p-4 bg-white/80 backdrop-blur rounded-xl border border-primary-100">
+                    <div className="text-2xl font-bold text-primary-600">150+</div>
+                    <div className="text-sm text-gray-600">Expert Articles</div>
+                  </div>
+                  <div className="text-center p-4 bg-white/80 backdrop-blur rounded-xl border border-accent-100">
+                    <div className="text-2xl font-bold text-accent-600">12</div>
+                    <div className="text-sm text-gray-600">Categories</div>
+                  </div>
+                  <div className="text-center p-4 bg-white/80 backdrop-blur rounded-xl border border-primary-100">
+                    <div className="text-2xl font-bold text-primary-600">50K+</div>
+                    <div className="text-sm text-gray-600">Monthly Readers</div>
+                  </div>
+                </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link to="/appointment" className="bg-gradient-to-r from-accent-600 to-primary-600 hover:from-accent-700 hover:to-primary-700 text-white px-8 py-4 rounded-xl font-bold text-center transition-all duration-300 shadow-lg hover:shadow-xl">
@@ -623,7 +661,7 @@ const Blog = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="relative h-64 bg-gray-100 rounded-xl overflow-hidden group">
                           <img 
-                            src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                             alt="Aesthetic treatment"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -641,7 +679,7 @@ const Blog = () => {
                         </div>
                         <div className="relative h-64 bg-gray-100 rounded-xl overflow-hidden group">
                           <img 
-                            src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                            src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                             alt="Cosmetic procedure"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             onError={(e: React.SyntheticEvent<HTMLImageElement>) => {

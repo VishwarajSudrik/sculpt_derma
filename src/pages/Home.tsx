@@ -1,17 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Star, CheckCircle, MapPin, Phone, Clock, ChevronLeft, ChevronRight, User, Microscope, Sparkles, Baby, Dumbbell, Activity, Flower, Syringe, Zap, StarOff, Beaker, Heart, Palette, Sun } from 'lucide-react'
-
-// Team image paths
-const drAkashTarkase = '/src/assets/images/team/Dr. Akash Tarkase.jpg'
-const drAzhar = '/src/assets/images/team/Dr. Azhar.jpg'
-const drBhushanDarkase = '/src/assets/images/team/Dr. Bhushan Darkase.jpg'
-const drDhanashree = '/src/assets/images/team/Dr. Dhanashree.jpg'
-const drNitinMaske = '/src/assets/images/team/Dr. Nitin Maske.jpg'
-const drRohini = '/src/assets/images/team/Dr. Rohini.jpg'
-const drShrenikOswal = '/src/assets/images/team/Dr. Shrenik Oswal.jpg'
-const drSomnathKarad = '/src/assets/images/team/Dr. Somnath Karad.jpg'
-const drSwarali = '/src/assets/images/team/Dr. Swarali.jpg'
+import { teamImages, brandImages, serviceImages, getNumberedImage } from '../utils/imageImports'
 
 const Home = () => {
   const [selectedImage, setSelectedImage] = useState<{ title: string, image: string, serviceLink: string } | null>(null)
@@ -134,19 +124,19 @@ const Home = () => {
   ]
 
   const beforeAfter = [
-    { title: "360 Deg. Lepictomy", image: "/src/assets/images/general/360-Deg.-Lepictomy.jpg", serviceLink: "/services#liposuction" },
-    { title: "Arm Lift", image: "/src/assets/images/general/Arm-Lift.jpg", serviceLink: "/services#arm-lift" },
-    { title: "Breast Augmentation with Implant", image: "/src/assets/images/general/Breast-Augmentation-with-Implant.jpg", serviceLink: "/services#breast-implants" },
-    { title: "Dermal Fillers", image: "/src/assets/images/general/Dermal-Fillers.jpg", serviceLink: "/services#dermal-fillers" },
-    { title: "Gynecomastia Surgery Pune", image: "/src/assets/images/general/Gynecomastia-Surgery-Pune.jpg", serviceLink: "/services#gynecomastia" },
-    { title: "Labioplasty", image: "/src/assets/images/general/Labioplasty.jpg", serviceLink: "/services#labiaplasty" },
-    { title: "Lip Fillers", image: "/src/assets/images/general/Lip-Fillers.jpg", serviceLink: "/services#lip-fillers" },
-    { title: "Liposuction Abdomen", image: "/src/assets/images/general/Liposuction-Abdomen.jpg", serviceLink: "/services#liposuction" },
-    { title: "Rhinoplasty in Pune", image: "/src/assets/images/general/Rhinoplasty-1.jpg", serviceLink: "/services#rhinoplasty" },
-    { title: "Mommy Makeover", image: "/src/assets/images/general/Mommy-Makeover.jpg", serviceLink: "/services#mommy-makeover" },
-    { title: "Tummy Tuck (Abdominoplasty)", image: "/src/assets/images/general/Tummy-Tuck-Abdominoplasty.jpg", serviceLink: "/services#tummy-tuck" },
-    { title: "Vaginal Reconstruction", image: "/src/assets/images/general/Vaginal-Resconstruction.jpg", serviceLink: "/services#vaginal-reconstruction" },
-    { title: "Vaginoplasty", image: "/src/assets/images/general/Vaginoplasty.jpg", serviceLink: "/services#vaginoplasty" }
+    { title: "360 Deg. Lepictomy", image: serviceImages.liposuction360, serviceLink: "/services#liposuction" },
+    { title: "Arm Lift", image: serviceImages.armLift, serviceLink: "/services#arm-lift" },
+    { title: "Breast Augmentation with Implant", image: serviceImages.breastAugmentation, serviceLink: "/services#breast-implants" },
+    { title: "Dermal Fillers", image: serviceImages.dermalFillers, serviceLink: "/services#dermal-fillers" },
+    { title: "Gynecomastia Surgery Pune", image: serviceImages.gynecomastia, serviceLink: "/services#gynecomastia" },
+    { title: "Labioplasty", image: serviceImages.labiaplasty, serviceLink: "/services#labiaplasty" },
+    { title: "Lip Fillers", image: serviceImages.lipFillers, serviceLink: "/services#lip-fillers" },
+    { title: "Liposuction Abdomen", image: serviceImages.liposuction, serviceLink: "/services#liposuction" },
+    { title: "Rhinoplasty in Pune", image: serviceImages.rhinoplasty, serviceLink: "/services#rhinoplasty" },
+    { title: "Mommy Makeover", image: serviceImages.mommyMakeover, serviceLink: "/services#mommy-makeover" },
+    { title: "Tummy Tuck (Abdominoplasty)", image: serviceImages.tummyTuck, serviceLink: "/services#tummy-tuck" },
+    { title: "Vaginal Reconstruction", image: serviceImages.vaginalReconstruction, serviceLink: "/services#vaginal-reconstruction" },
+    { title: "Vaginoplasty", image: serviceImages.vaginoplasty, serviceLink: "/services#vaginoplasty" }
   ]
 
   const clinics = [
@@ -297,13 +287,13 @@ const Home = () => {
           {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
             <div key={i} className="flex items-center space-x-12 px-6 leading-none">
               <span className="text-3xl md:text-5xl font-serif text-white/50 uppercase tracking-[0.2em]">New Clients Welcome</span>
-              <img src="/src/assets/images/general/Sculpt-Logo-2.png" alt="Logo" className="h-22 md:h-28 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(184,138,90,0.7)] mx-6" />
+              <img src={brandImages.logo} alt="Logo" className="h-22 md:h-28 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(184,138,90,0.7)] mx-6" />
               <span className="text-3xl md:text-5xl font-serif text-white/50 uppercase tracking-[0.2em]">Body Contouring Packages Available</span>
-              <img src="/src/assets/images/general/Sculpt-Logo-2.png" alt="Logo" className="h-22 md:h-28 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(184,138,90,0.7)] mx-6" />
+              <img src={brandImages.logo} alt="Logo" className="h-22 md:h-28 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(184,138,90,0.7)] mx-6" />
               <span className="text-3xl md:text-5xl font-serif text-gradient uppercase tracking-[0.2em] font-light italic drop-shadow-[0_0_15px_rgba(184,138,90,0.4)]">Book Today & Glow Tomorrow</span>
-              <img src="/src/assets/images/general/Sculpt-Logo-2.png" alt="Logo" className="h-22 md:h-28 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(184,138,90,0.7)] mx-6" />
+              <img src={brandImages.logo} alt="Logo" className="h-22 md:h-28 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(184,138,90,0.7)] mx-6" />
               <span className="text-3xl md:text-5xl font-serif text-white/50 uppercase tracking-[0.2em]">10% Off First-Time Botox</span>
-              <img src="/src/assets/images/general/Sculpt-Logo-2.png" alt="Logo" className="h-22 md:h-28 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(184,138,90,0.7)] mx-6" />
+              <img src={brandImages.logo} alt="Logo" className="h-22 md:h-28 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(184,138,90,0.7)] mx-6" />
             </div>
           ))}
         </div>
@@ -743,23 +733,23 @@ const Home = () => {
                 {[...Array(3)].map((_, repeatIndex) => (
                   <div key={repeatIndex} className="flex gap-4 min-w-max">
                     {[
-                      { name: "Breast Implants", description: "Enhance natural curves with premium implants", image: "/src/assets/images/general/Breast-Augmentation-with-Implant.jpg", price: "Rs. 1.4L", type: "surgical", icon: <Activity className="w-6 h-6" /> },
-                      { name: "Mommy Makeover", description: "Complete post-pregnancy transformation", image: "/src/assets/images/general/Mommy-Makeover.jpg", price: "From Rs. 2.2L", type: "surgical", icon: <Baby className="w-6 h-6" /> },
-                      { name: "Rhinoplasty", description: "Precision nose reshaping surgery", image: "/src/assets/images/general/Rhinoplasty-1.jpg", price: "From Rs. 80K", type: "surgical", icon: <Activity className="w-6 h-6" /> },
-                      { name: "Liposuction", description: "Advanced body contouring procedures", image: "/src/assets/images/general/Liposuction-2-1.jpg", price: "From Rs. 60K", type: "surgical", icon: <Dumbbell className="w-6 h-6" /> },
-                      { name: "Tummy Tuck", description: "Abdominoplasty for flat abdomen", image: "/src/assets/images/general/Tummy-Tuck-Abdominoplasty.jpg", price: "From Rs. 80K", type: "surgical", icon: <Dumbbell className="w-6 h-6" /> },
-                      { name: "Arm Lift", description: "Tone upper arms effectively", image: "/src/assets/images/general/Arm-Lift.jpg", price: "From Rs. 70K", type: "surgical", icon: <Dumbbell className="w-6 h-6" /> },
-                      { name: "Gynecomastia", description: "Male breast reduction surgery", image: "/src/assets/images/general/Gynecomastia-Surgery-Pune.jpg", price: "From Rs. 70K", type: "surgical", icon: <Activity className="w-6 h-6" /> },
-                      { name: "Vaginoplasty", description: "Female genital rejuvenation", image: "/src/assets/images/general/Vaginoplasty.jpg", price: "From Rs. 60K", type: "surgical", icon: <Flower className="w-6 h-6" /> },
-                      { name: "Dermal Fillers", description: "Restore volume and youthfulness", image: "/src/assets/images/general/Dermal-Fillers.jpg", price: "From Rs. 15K", type: "non-surgical", icon: <Syringe className="w-6 h-6" /> },
-                      { name: "Botox", description: "Smooth wrinkles and fine lines", image: "/src/assets/images/general/3.jpg", price: "From Rs. 8K", type: "non-surgical", icon: <Sparkles className="w-6 h-6" /> },
-                      { name: "Laser Hair Removal", description: "Permanent hair reduction", image: "/src/assets/images/general/4.jpg", price: "From Rs. 3K", type: "non-surgical", icon: <Zap className="w-6 h-6" /> },
-                      { name: "Acne Scars Treatment", description: "Clear acne scars effectively", image: "/src/assets/images/general/5.jpg", price: "From Rs. 5K", type: "non-surgical", icon: <StarOff className="w-6 h-6" /> },
-                      { name: "Chemical Peels", description: "Skin rejuvenation treatments", image: "/src/assets/images/general/8.jpg", price: "From Rs. 2.5K", type: "non-surgical", icon: <Beaker className="w-6 h-6" /> },
-                      { name: "Lip Fillers", description: "Enhance lip volume naturally", image: "/src/assets/images/general/Lip-Fillers.jpg", price: "From Rs. 12K", type: "non-surgical", icon: <Heart className="w-6 h-6" /> },
-                      { name: "Non-Surgical Facelift", description: "Non-invasive facial rejuvenation", image: "/src/assets/images/general/9.jpg", price: "From Rs. 25K", type: "non-surgical", icon: <Activity className="w-6 h-6" /> },
-                      { name: "Melasma Treatment", description: "Treat hyperpigmentation", image: "/src/assets/images/general/6.jpg", price: "From Rs. 4K", type: "non-surgical", icon: <Palette className="w-6 h-6" /> },
-                      { name: "Freckles Treatment", description: "Reduce freckles safely", image: "/src/assets/images/general/7.jpg", price: "From Rs. 3K", type: "non-surgical", icon: <Sun className="w-6 h-6" /> }
+                      { name: "Breast Implants", description: "Enhance natural curves with premium implants", image: serviceImages.breastAugmentation, price: "Rs. 1.4L", type: "surgical", icon: <Activity className="w-6 h-6" /> },
+                      { name: "Mommy Makeover", description: "Complete post-pregnancy transformation", image: serviceImages.mommyMakeover, price: "From Rs. 2.2L", type: "surgical", icon: <Baby className="w-6 h-6" /> },
+                      { name: "Rhinoplasty", description: "Precision nose reshaping surgery", image: serviceImages.rhinoplasty, price: "From Rs. 80K", type: "surgical", icon: <Activity className="w-6 h-6" /> },
+                      { name: "Liposuction", description: "Advanced body contouring procedures", image: serviceImages.liposuction, price: "From Rs. 60K", type: "surgical", icon: <Dumbbell className="w-6 h-6" /> },
+                      { name: "Tummy Tuck", description: "Abdominoplasty for flat abdomen", image: serviceImages.tummyTuck, price: "From Rs. 80K", type: "surgical", icon: <Dumbbell className="w-6 h-6" /> },
+                      { name: "Arm Lift", description: "Tone upper arms effectively", image: serviceImages.armLift, price: "From Rs. 70K", type: "surgical", icon: <Dumbbell className="w-6 h-6" /> },
+                      { name: "Gynecomastia", description: "Male breast reduction surgery", image: serviceImages.gynecomastia, price: "From Rs. 70K", type: "surgical", icon: <Activity className="w-6 h-6" /> },
+                      { name: "Vaginoplasty", description: "Female genital rejuvenation", image: serviceImages.vaginoplasty, price: "From Rs. 60K", type: "surgical", icon: <Flower className="w-6 h-6" /> },
+                      { name: "Dermal Fillers", description: "Restore volume and youthfulness", image: serviceImages.dermalFillers, price: "From Rs. 15K", type: "non-surgical", icon: <Syringe className="w-6 h-6" /> },
+                      { name: "Botox", description: "Smooth wrinkles and fine lines", image: getNumberedImage(3), price: "From Rs. 8K", type: "non-surgical", icon: <Sparkles className="w-6 h-6" /> },
+                      { name: "Laser Hair Removal", description: "Permanent hair reduction", image: getNumberedImage(4), price: "From Rs. 3K", type: "non-surgical", icon: <Zap className="w-6 h-6" /> },
+                      { name: "Acne Scars Treatment", description: "Clear acne scars effectively", image: getNumberedImage(5), price: "From Rs. 5K", type: "non-surgical", icon: <StarOff className="w-6 h-6" /> },
+                      { name: "Chemical Peels", description: "Skin rejuvenation treatments", image: getNumberedImage(8), price: "From Rs. 2.5K", type: "non-surgical", icon: <Beaker className="w-6 h-6" /> },
+                      { name: "Lip Fillers", description: "Enhance lip volume naturally", image: serviceImages.lipFillers, price: "From Rs. 12K", type: "non-surgical", icon: <Heart className="w-6 h-6" /> },
+                      { name: "Non-Surgical Facelift", description: "Non-invasive facial rejuvenation", image: getNumberedImage(9), price: "From Rs. 25K", type: "non-surgical", icon: <Activity className="w-6 h-6" /> },
+                      { name: "Melasma Treatment", description: "Treat hyperpigmentation", image: getNumberedImage(6), price: "From Rs. 4K", type: "non-surgical", icon: <Palette className="w-6 h-6" /> },
+                      { name: "Freckles Treatment", description: "Reduce freckles safely", image: getNumberedImage(7), price: "From Rs. 3K", type: "non-surgical", icon: <Sun className="w-6 h-6" /> }
                     ].map((service, index) => (
                       <div key={`${repeatIndex}-${index}`} className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-secondary-100 hover:border-primary-300 cursor-pointer w-80 flex-shrink-0">
                         {/* Service Type Badge */}
@@ -1058,7 +1048,7 @@ const Home = () => {
                 <div className="bg-white rounded-2xl shadow-lg border border-accent-100 hover:shadow-xl transition-all duration-300 group w-80 flex-shrink-0">
                   <div className="relative h-64 bg-gradient-to-br from-primary-100 to-accent-100 overflow-hidden">
                     <img
-                      src={drAkashTarkase}
+                      src={teamImages.drAkashTarkase}
                       alt="Dr. Akash Tarkase"
                       className="w-full h-full object-cover"
                       onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -1097,7 +1087,7 @@ const Home = () => {
                 <div className="bg-white rounded-2xl shadow-lg border border-accent-100 hover:shadow-xl transition-all duration-300 group w-80 flex-shrink-0">
                   <div className="relative h-64 bg-gradient-to-br from-primary-100 to-accent-100 overflow-hidden">
                     <img
-                      src={drSomnathKarad}
+                      src={teamImages.drSomnathKarad}
                       alt="Dr. Somnath Karad"
                       className="w-full h-full object-cover"
                       onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -1134,7 +1124,7 @@ const Home = () => {
                 <div className="bg-white rounded-2xl shadow-lg border border-accent-100 hover:shadow-xl transition-all duration-300 group w-80 flex-shrink-0">
                   <div className="relative h-64 bg-gradient-to-br from-primary-100 to-accent-100 overflow-hidden">
                     <img
-                      src={drAzhar}
+                      src={teamImages.drAzhar}
                       alt="Dr. Azhar"
                       className="w-full h-full object-cover"
                       onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -1169,7 +1159,7 @@ const Home = () => {
                 <div className="bg-white rounded-2xl shadow-lg border border-accent-100 hover:shadow-xl transition-all duration-300 group w-80 flex-shrink-0">
                   <div className="relative h-64 bg-gradient-to-br from-primary-100 to-accent-100 overflow-hidden">
                     <img
-                      src={drSwarali}
+                      src={teamImages.drSwarali}
                       alt="Dr. Swarali"
                       className="w-full h-full object-cover"
                       onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -1205,7 +1195,7 @@ const Home = () => {
                 <div className="bg-white rounded-2xl shadow-lg border border-accent-100 hover:shadow-xl transition-all duration-300 group w-80 flex-shrink-0">
                   <div className="relative h-64 bg-gradient-to-br from-primary-100 to-accent-100 overflow-hidden">
                     <img
-                      src={drBhushanDarkase}
+                      src={teamImages.drBhushanDarkase}
                       alt="Dr. Bhushan Darkase"
                       className="w-full h-full object-cover"
                       onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -1240,7 +1230,7 @@ const Home = () => {
                 <div className="bg-white rounded-2xl shadow-lg border border-accent-100 hover:shadow-xl transition-all duration-300 group w-80 flex-shrink-0">
                   <div className="relative h-64 bg-gradient-to-br from-primary-100 to-accent-100 overflow-hidden">
                     <img
-                      src={drNitinMaske}
+                      src={teamImages.drNitinMaske}
                       alt="Dr. Nitin Maske"
                       className="w-full h-full object-cover"
                       onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -1275,7 +1265,7 @@ const Home = () => {
                 <div className="bg-white rounded-2xl shadow-lg border border-accent-100 hover:shadow-xl transition-all duration-300 group w-80 flex-shrink-0">
                   <div className="relative h-64 bg-gradient-to-br from-primary-100 to-accent-100 overflow-hidden">
                     <img
-                      src={drShrenikOswal}
+                      src={teamImages.drShrenikOswal}
                       alt="Dr. Shrenik Oswal"
                       className="w-full h-full object-cover"
                       onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -1343,7 +1333,7 @@ const Home = () => {
                 <div className="bg-white rounded-2xl shadow-lg border border-accent-100 hover:shadow-xl transition-all duration-300 group w-80 flex-shrink-0">
                   <div className="relative h-64 bg-gradient-to-br from-primary-100 to-accent-100 overflow-hidden">
                     <img
-                      src={drRohini}
+                      src={teamImages.drRohini}
                       alt="Dr. Rohini"
                       className="w-full h-full object-cover"
                       onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -1378,7 +1368,7 @@ const Home = () => {
                 <div className="bg-white rounded-2xl shadow-lg border border-accent-100 hover:shadow-xl transition-all duration-300 group w-80 flex-shrink-0">
                   <div className="relative h-64 bg-gradient-to-br from-primary-100 to-accent-100 overflow-hidden">
                     <img
-                      src={drDhanashree}
+                      src={teamImages.drDhanashree}
                       alt="Dr. Dhanashree"
                       className="w-full h-full object-cover"
                       onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
